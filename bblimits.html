@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name='viewport' content='user-scalable=0'>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="one-page-wonder.css" rel="stylesheet">
+    <title>BB Limits</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-default" role="navigation" style="margin-bottom: 0px;">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Dr. P Jones</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="OnlineSided.pdf">Thesis</a></li>
+            <li><a href="FinalMPhys.pdf">MPhys</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="header-image">
+      <div class="headline">
+        <div class="container">
+          <h1>Neutrinoless Double Beta Decay</h1>
+          <h2>Explained</h2>
+        </div>
+      </div>
+    </header>
+
+    <div class="container">
+
+      <hr class="featurette-divider">
+      
+      <div class="featurette">
+        <img class="featurette-image img-responsive pull-right" src="2b2v.png">
+        <h2 class="featurette-heading">Double beta decay
+          <span class="text-muted">A summary</span>
+        </h2>
+        <p class="lead">
+          Double beta decay, is the simultaneous occurrence of two beta decays whereby two neutrons convert to two protons, two electrons and two neutrinos  via the weak force.
+        </p>
+        <p class="lead">
+          The <a href="http://en.wikipedia.org/wiki/Feynmann_diagram">Feynmann diagram</a> on the right illustrates this process (time progresses from left to right).
+        </p>
+        <p class="lead">
+          Double beta decay was predicted in 1935 and has been observed in many isotopes.
+        </p>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="featurette">
+        <img class="featurette-image img-responsive pull-left" src="2b0v.png">
+        <h2 class="featurette-heading">Neutrinoless Double beta decay
+          <span class="text-muted">A brief theory of</span>
+        </h2>
+        <p class="lead">
+          Neutrinoless double beta decay, is a theorised mode of double beta decay whereby no neutrinos are emitted.
+          This can only occur if the neutrino is a <a href="http://en.wikipedia.org/wiki/Majorana_fermion">Majorana particle</a> i.e. anti-neutrinos and neutrinos are the same particle.
+        </p>
+        <p class="lead">
+          The <a href="http://en.wikipedia.org/wiki/Feynmann_diagram">Feynmann diagram</a> on the left differs from the one above as no neutrinos exist after the decay.
+        </p>
+        <p class="lead">
+          Neutrinoless double beta decay was predicted in 1939 and has not been observed. 
+        </p>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="featurette">
+        <img class="featurette-image pull-right" style="max-width: 40%; height: auto;" src="IdealSignal.png">
+        <h2 class="featurette-heading">Experimental signature
+          <span class="text-muted"></span>
+        </h2>
+        <p class="lead">
+          The summed energy of the two electrons emitted by double beta decay can take many values less than the total energy available for the decay.
+          Whereas the summed energy of the two electrons emitted by neutrinoless double beta decay will be equal to the total energy available for the decay.
+        </p>
+        <p class="lead">
+          An simulated experimental signature for <a href="http://en.wikipedia.org/wiki/Isotopes_of_neodymium"><sup>150</sup>Nd</a> decays is shown on the right for double beta decay in blue and neutrinoless double beta decay in red.
+          Note the experiment is not considered perfect which leads to an extra spread in energies.
+        </p>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="featurette">
+        <h2 class="featurette-heading">Neutrino mass
+          <span class="text-muted">Measurement</span>
+        </h2>
+        <p class="lead">
+          Observing neutrinoless double beta decay would not only state that neutrinos are Majorana particles but also allow a measurement of the neutrino's mass.
+          This is because the <a href="http://en.wikipedia.org/wiki/Decay_rate#Radioactive_decay_rates">rate</a> of neutrinoless double beta decay, <var>R</var>, is related to the neutrino mass, <var>m</var> by, <br>
+        </p>
+        <p class="well well-sm lead"><var>R</var> &#8733; <var>I</var> <var>G</var> <var>M<sup>2</sup></var> <var>m<sup>2</sup></var></p>
+        <p class="lead">
+          where <var>I</var> is the mass of the decaying isotope, <var>G</var> and <var>M</var> are constants that depend on which isotope is decaying.
+        </p>
+        <p class="lead">
+          
+        </p>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="featurette">
+        <canvas id="nucleus_plot" class="featurette-image pull-left" width="400" height="400"></canvas>
+        <h2 class="featurette-heading">Theory
+          <span class="text-muted">of <var>G</var> and <var>M</var></span>
+        </h2>
+        <p class="lead">
+          <var>G</var> Is termed the phase space factor, and is related to the number of final states the electrons and nucleus can be in.
+        </p>
+        <p class="lead">
+          <var>M</var> Is termed the nuclear matrix element factor and is related to the probability of the decay occuring. 
+          Different theoretical models predict different values, leading to a range of possible neutrino masses for a single observed decay rate.
+        </p>
+        <p>
+          <label class="control-label">Mode:</label><br>
+          <label class="radio-inline">
+            <input type="radio" name="mode" id="inlineRadio1" value="G"> <var>G</var>
+          </label>
+          <label class="radio-inline">
+            <input type="radio" name="mode" id="inlineRadio2" value="M" checked> <var>M</var>
+          </label>
+          <label class="radio-inline">
+            <input type="radio" name="mode" id="inlineRadio3" value="GM"> <var>G</var> <var>M <sup>2</sup></var>
+          </label>
+        </p>
+        <p>
+          <label class="control-label">Nuclear Matrix Element models:</label><br>
+          <label class="checkbox-inline">
+            <input type="checkbox" id="ibm_visible" checked> IBM-2
+          </label>
+          <label class="checkbox-inline">
+            <input type="checkbox" id="qrpa_visible" checked> QRPA-Tü
+          </label>
+          <label class="checkbox-inline">
+            <input type="checkbox" id="ism_visible" checked> ISM
+          </label>
+        </p>
+        <p>
+          <var>M</var> Data from: J. Barea, J. Kotila, F. Iachello, Nuclear matrix elements for double-β decay, <a href="http://arxiv.org/abs/1301.4203">arXiv:1301.4203</a> [nucl-th]<br>
+          <var>G</var> Data from: J. Kotila, F. Iachello, Phase space factors for double-β decay, <a href="http://arxiv.org/abs/1209.5722">arXiv:1209.5722</a> [nucl-th]<br>
+        </p>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="featurette">
+        <img class="featurette-image pull-right" style="max-width: 40%; height: auto;" src="http://scitechdaily.com/images/GERDA-Experiment-Phase-I-Results.jpg">
+        <h2 class="featurette-heading">Experimental aims
+          <span class="text-muted">Summarised</span>
+        </h2>
+        <p class="lead">
+          Neutrinoless double beta decay is a rare process, and therefore experiments that reduce backgrounds and/or increase the mass of the decay isotope will perform better.
+          However due to cost and complexity constaints the existing and proposed experiments generally either maximise the mass of the decay isotope or minimise the backgrounds by improved energy resolution.
+        </p>
+        <p class="lead">
+          The experiments also choose different isotopes, based on cost, natural abundance, total decay energy and the predicted value of <var>G M<sup>2</sup></var>.
+        </p>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="featurette">
+        <h2 class="featurette-heading">Experimental results
+          <span class="text-muted">and predictions</span>
+        </h2>
+        <p class="lead">
+          As yet no experiment has observed neutrinoless double beta decay.
+          The three most recent limits from active experiments are listed below,
+        </p>
+        <table class="table">
+          <thead><th>Experiment</th><th>Category</th><th>Isotope</th><th>Half-life limit / yr</th></thead>
+          <tr><td><a href="http://www.awa.tohoku.ac.jp/kamlande/">kamLAND-Zen</a></td><td>Large Mass</td><td><sup>136</sup>Xe</td>
+            <td><a href="http://arxiv.org/abs/1211.3863">1.9x10<sup>25</sup></a></td></tr>
+          <tr><td><a href="https://www-project.slac.stanford.edu/exo/">EXO</a></td><td>Energy Resolution</td><td><sup>136</sup>Xe</td>
+            <td><a href="http://arxiv.org/abs/1205.5608">1.6x10<sup>25</sup></a></tr>
+          <tr><td><a href="http://www.mpi-hd.mpg.de/gerda/">GERDA</a></td><td>Energy Resolution</td><td><sup>76</sup>Ge</td>
+          <td><a href="http://arxiv.org/abs/1307.4720">2.1x10<sup>25</sup></a></td></tr>
+        </table>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="featurette">
+        <canvas id="limit_plot" class="featurette-image pull-left" width="400" height="400"></canvas>
+        <h2 class="featurette-heading">Experimental results
+          <span class="text-muted">compared</span>
+        </h2>
+        <p class="lead">
+          The experimental results are shown as vertical and horizontal black lines, whereas the theoretical models are shown as coloured diagonal lines.
+          The small tick values on the theoretical models represent various neutrino masses in <a href="https://en.wikipedia.org/wiki/Electronvolt">meV</a>.
+          The tick values to the left or below of the black result lines are excluded.          
+        </p>
+      </div>
+    
+      <hr class="featurette-divider">
+
+      <div class="featurette">
+        <canvas id="limit_plot" class="featurette-image pull-right" width="400" height="400"></canvas>
+        <h2 class="featurette-heading">Experimental predictions
+          <span class="text-muted">compared</span>
+        </h2>
+        <p class="lead">
+          There are a number of experiments due to take data in the coming years
+        </p>
+      </div>
+
+      <hr class="featurette-divider">
+      
+      <footer>
+        <div class="row">
+          <div class="col-lg-12">
+            <p>The plots and diagrams are Copyright free, however the images are copyright SNO+ and CUORE respectively.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js" ></script>
+    <script src="nucleus_plot.js"></script>
+    <script src="limit_plot.js"></script>
+    <script src="bblimits.js"></script>
+  </body>
+</html>
