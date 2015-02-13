@@ -210,12 +210,29 @@
       <hr class="featurette-divider">
 
       <div class="featurette">
-        <canvas id="limit_plot" class="featurette-image pull-right" width="400" height="400"></canvas>
+        <canvas id="predictions_plot" class="featurette-image pull-right" width="400" height="400"></canvas>
         <h2 class="featurette-heading">Experimental predictions
           <span class="text-muted">compared</span>
         </h2>
         <p class="lead">
-          There are a number of experiments due to take data in the coming years
+          As these experiments are background dominated it is possible to assume that the half-life limit will improve with the square root of the live-time.
+          This allows a comparison of the current experiments (assuming they continue) and experiments that are due to take data in the coming years.
+          Note that a comparison of the half-lifes is only safe for experiments using the same isotope.
+        </p>
+        <p>
+          <label class="control-label">Mode:</label><br>
+          <label class="radio-inline">
+            <input type="radio" name="predictions_mode" id="inlineRadio1" value="-1" checked> Half-life
+          </label>
+          <label class="radio-inline">
+            <input type="radio" name="predictions_mode" id="inlineRadio2" value="0" > IBM-2 Mass
+          </label>
+          <label class="radio-inline">
+            <input type="radio" name="predictions_mode" id="inlineRadio3" value="1"> QRPA-Tü Mass
+          </label>
+          <label class="radio-inline">
+            <input type="radio" name="predictions_mode" id="inlineRadio3" value="2"> ISM Mass
+          </label>
         </p>
       </div>
 
@@ -233,6 +250,7 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js" ></script>
     <script src="nucleus_plot.js"></script>
     <script src="limit_plot.js"></script>
+    <script src="predictions_plot.js"></script>
     <script src="bblimits.js"></script>
   </body>
 </html>

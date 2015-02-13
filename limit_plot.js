@@ -181,7 +181,12 @@ bblimits.limit_plot = new function()
       if(Math.abs(Math.log(x) / Math.LN10 - Math.round(Math.log(x) / Math.LN10)) <= 0.01)
       {
         step = 4;
-        this._context.fillText(Math.round(Math.log(x) / Math.LN10), pixel[0], pixel[1] + 16);
+        this._context.fillText("10", pixel[0] - 5, pixel[1] + 22);
+        this._context.save();
+        var font_args = this._context.font.split(' ');
+        this._context.font = "10px " + font_args[font_args.length - 1];
+        this._context.fillText(Math.round(Math.log(x) / Math.LN10), pixel[0] + 10, pixel[1] + 10);
+        this._context.restore();
       }
       this._context.beginPath();
       this._context.moveTo(pixel[0], pixel[1]);
@@ -201,7 +206,12 @@ bblimits.limit_plot = new function()
       if(Math.abs(Math.log(y) / Math.LN10 - Math.round(Math.log(y) / Math.LN10)) <= 0.01)
       {
         step = 4;
-        this._context.fillText(Math.round(Math.log(y) / Math.LN10), pixel[0] - 25, pixel[1]);
+        this._context.fillText("10", pixel[0] - 29, pixel[1]);
+        this._context.save();
+        var font_args = this._context.font.split(' ');
+        this._context.font = "10px " + font_args[font_args.length - 1];
+        this._context.fillText(Math.round(Math.log(y) / Math.LN10), pixel[0] - 14, pixel[1] - 12);
+        this._context.restore();
       }
       this._context.beginPath();
       this._context.moveTo(pixel[0] + 1, pixel[1]);
@@ -216,10 +226,10 @@ bblimits.limit_plot = new function()
 
     }
     // Finally the axis labels
-    this._context.fillText("Half-life, A=" + this._x_A, this._axis_size + this._width / 2 - 50, this._height + 32);
-    this._context.translate(12, this._height / 2 + 20);
+    this._context.fillText("Half-life yr^-1, A=" + this._x_A, this._axis_size + this._width / 2 - 70, this._height + 36);
+    this._context.translate(12, this._height / 2 + 50);
     this._context.rotate(-Math.PI/2);
-    this._context.fillText("Half-life, A=" + this._y_A, 0, 0);
+    this._context.fillText("Half-life yr^-1, A=" + this._y_A, 0, 0);
     this._context.restore();
   };
   this.draw();
